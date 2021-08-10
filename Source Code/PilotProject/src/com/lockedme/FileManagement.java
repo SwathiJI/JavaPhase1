@@ -1,0 +1,54 @@
+package com.lockedme;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.List;
+
+public class FileManagement 
+{
+	public static List<String> getAllFiles(String folderpath)
+	{
+			//Creating File Object
+			File n1=new File(folderpath);
+			
+			//Getting all the files into FileArray
+			File[] listoffiles = n1.listFiles();
+			
+			//Declare a List to Store File Names
+			List<String> fileNames = new ArrayList<String>();
+			
+			for(File n:listoffiles)
+				fileNames.add(n.getName());
+			
+			//Return the List
+			return fileNames;
+	}
+	
+	/**
+	 * This method will create or append the content into the specified files
+	 * @param folderpath
+	 * @param fileName
+	 * @param content
+	 * @return boolean
+	 */
+	public static boolean addFiles(String folderpath, String fileName, List<String> content)
+	{
+		try
+		{
+			File n1 = new File(folderpath, fileName);
+			FileWriter fw =	new FileWriter(n1);	
+			
+			for(String s:content)
+			{
+				fw.write(s+"\n");
+			}
+			fw.close();
+			return true;
+		}
+		catch(Exception Ex)
+		{
+			return false;
+		}
+	}
+}

@@ -1,0 +1,18 @@
+package com.lockedme;
+
+import java.util.List;
+
+public class PilotProject 
+{
+	static final String folderpath="D:\\Suheal\\MyPhase1 Project\\LockedMe Files";
+	
+	public static void main(String[] args)
+	{
+		List <String> fileNames =FileManagement.getAllFiles(folderpath);
+		
+		for(String n:fileNames)
+			System.out.println(n);
+		
+	}
+	
+}

@@ -1,0 +1,9 @@
+Create 2 Different class files and focus on the code of the project.
+
+Implement each step in one go.
+
+Run sufficent queries and check the functionality of the code.
+
+Exception handling is mandatory.
+
+Lets meet up in 2nd Sprint
