@@ -10,19 +10,19 @@ public class PilotProject
 	
 	public static void main(String[] args)
 	{
-		//Code for Searching the file
-
+		//Code fcor deleting the file
 		String fileName;
 		Scanner obj = new Scanner(System.in);
-		System.out.println("Enter the file name to be searched:");
+		System.out.println("Enter the file name to be deleted:");
 		fileName = obj.nextLine();
-				
-		boolean isFound = FileManagement.searchFile(folderpath, fileName);
-				
-			if(isFound)
-				System.out.println("File is present in the folder");
-			else
-				System.out.println("File not Found");
+		
+		boolean isDeleted = FileManagement.deleteFile(folderpath, fileName);
+		
+		if(isDeleted)
+			System.out.println("File deleted successfully");
+		else
+			System.out.println("File not Found");
+		
 	}
 	
 }

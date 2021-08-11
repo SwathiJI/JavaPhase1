@@ -58,7 +58,6 @@ public class FileManagement
 	 * @param fileName
 	 * @return boolean
 	 */
-	
 	public static boolean deleteFile(String folderpath, String fileName)
 	{
 		File file = new  File(folderpath+"\\"+fileName);
@@ -74,21 +73,5 @@ public class FileManagement
 		{
 				return false;
 		}
-	}
-	
-	/**
-	 * This method will search the file name
-	 * @param folderpath
-	 * @param fileName
-	 * @return boolean
-	 */
-	public static boolean searchFile(String folderpath, String fileName)
-	{
-		File file = new  File(folderpath+"\\"+fileName);
-		
-		if(file.exists())
-			return true;
-		else
-			return false;
 	}
 }

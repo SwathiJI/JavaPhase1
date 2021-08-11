@@ -52,43 +52,5 @@ public class FileManagement
 		}
 	}
 	
-	/**
-	 * This method will delete the file name if its present in the directory 
-	 * @param folderpath
-	 * @param fileName
-	 * @return boolean
-	 */
-	
 	public static boolean deleteFile(String folderpath, String fileName)
-	{
-		File file = new  File(folderpath+"\\"+fileName);
-		
-		try
-		{
-			if(file.delete())
-				return true;
-			else
-				return false;
-		}
-		catch(Exception Ex)
-		{
-				return false;
-		}
-	}
-	
-	/**
-	 * This method will search the file name
-	 * @param folderpath
-	 * @param fileName
-	 * @return boolean
-	 */
-	public static boolean searchFile(String folderpath, String fileName)
-	{
-		File file = new  File(folderpath+"\\"+fileName);
-		
-		if(file.exists())
-			return true;
-		else
-			return false;
-	}
 }
