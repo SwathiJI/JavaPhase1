@@ -20,6 +20,8 @@ public class PilotProject
 			//Display Menu
 			ch=displayMenu();
 			
+			System.out.println("Enter your choice");
+		
 			switch (ch)
 				{
 					case 1 : getAllFiles();
@@ -52,7 +54,6 @@ public class PilotProject
 		System.out.println("\t4. Search a File");
 		System.out.println("\t5. Exit");
 		System.out.println("\n**************************************************************");
-		System.out.println("Enter your choice");
 		ch = Integer.parseInt(obj.nextLine());
 		
 		return ch;

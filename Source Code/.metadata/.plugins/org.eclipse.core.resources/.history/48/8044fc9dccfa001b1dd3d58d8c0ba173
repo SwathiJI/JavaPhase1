@@ -7,42 +7,34 @@ import java.util.Scanner;
 public class PilotProject 
 {
 	static final String folderpath="D:\\Suheal\\MyPhase1 Project\\LockedMe Files";
+	
 	public static void main(String[] args)
-	{	
-		int proceed = 1;
-		
-		
-		do
-		{
-			//Variable Declaration
-			int ch;
-		
-			//Display Menu
-			ch=displayMenu();
-			
-			switch (ch)
-				{
-					case 1 : getAllFiles();
-							break;
-					case 2 : createFiles();
-							break;
-					case 3 : deleteFile();
-							break;
-					case 4 : searchFile();
-							break;
-					case 5 : System.exit(0);
-							break;
-					default : System.out.println("Invalid option");
-							break;
-				}
-		}
-		while(proceed>0);
-	}
-	public static int displayMenu()
 	{
+		//Variable Declaration
 		Scanner obj = new Scanner(System.in);
 		int ch;
 		
+		//Display Menu
+		displayMenu();
+		System.out.println("Enter your choice");
+		ch=Integer.parseInt(obj.nextLine());
+		
+		switch (ch)
+		{
+			case 1 : getAllFiles();
+					break;
+			case 2 : createFiles();
+					break;
+			case 3 : deleteFile();
+					break;
+			case 4 : searchFile();
+					break;
+			case 5 : System.exit(0);
+		}
+	}
+	
+	public static void displayMenu()
+	{
 		System.out.println("\n\n--------------------------------------------------------------");
 		System.out.println("\t\t LockedMe.com");
 		System.out.println("--------------------------------------------------------------");
@@ -52,10 +44,7 @@ public class PilotProject
 		System.out.println("\t4. Search a File");
 		System.out.println("\t5. Exit");
 		System.out.println("\n**************************************************************");
-		System.out.println("Enter your choice");
-		ch = Integer.parseInt(obj.nextLine());
 		
-		return ch;
 	}
 	
 	public static void getAllFiles()
@@ -101,6 +90,9 @@ public class PilotProject
 					System.out.println("File and Data Saved Successfully");
 			else
 					System.out.println("Error while creating files. Please Contact Admin@Locedme.com");
+				
+			//Closing Scanner Object
+			obj.close();
 	}
 	
 	public static void deleteFile()

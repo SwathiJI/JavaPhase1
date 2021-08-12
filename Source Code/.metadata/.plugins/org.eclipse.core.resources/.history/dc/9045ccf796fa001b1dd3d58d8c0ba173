@@ -1,0 +1,28 @@
+package com.lockedme;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class PilotProject 
+{
+	static final String folderpath="D:\\Suheal\\MyPhase1 Project\\LockedMe Files";
+	
+	public static void main(String[] args)
+	{
+		//Code for Searching the file
+
+		String fileName;
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter the file name to be searched:");
+		fileName = obj.nextLine();
+				
+		boolean isFound = FileManagement.searchFile(folderpath, fileName);
+				
+			if(isFound)
+				System.out.println("File is present in the folder");
+			else
+				System.out.println("File not Found");
+	}
+	
+}

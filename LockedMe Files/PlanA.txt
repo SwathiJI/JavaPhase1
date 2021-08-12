@@ -1,9 +1,0 @@
-Create a class file to maintain files.
-
-Create a sample data to capture the values and output the same.
-
-The total time frame for the project is 15 days.
-
-Send the final codes to TM and get the testing done on or before 13th Day.
-
-Thank you
