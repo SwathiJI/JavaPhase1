@@ -65,20 +65,8 @@ public class PilotProject
 
 		List <String> fileNames =FileManagement.getAllFiles(folderpath);
 				
-				
-			if(fileNames.size()==0)
-				System.out.println("No Files in the directory");
-			else
-			{
-				//Sorting Files
-	            Collections.sort(fileNames);
-	            
-	            for(String n:fileNames)
-				{
-					//Printing sorted file List
-				System.out.println(n);
-				}
-			}
+				for(String n:fileNames)
+				System.out.println("n");
 	}
 	
 	public static void createFiles()
@@ -122,15 +110,11 @@ public class PilotProject
 
 			String fileName;
 			Scanner obj = new Scanner(System.in);
-			
-			//Read the Content from user to delete the file
 			System.out.println("Enter the file name to be deleted:");
 			fileName = obj.nextLine();
-			
-			//Displaying if the entered file is deleted
+				
 			boolean isDeleted = FileManagement.deleteFile(folderpath, fileName);
-			
-			
+				
 			if(isDeleted)
 					System.out.println("File deleted successfully");
 			else
@@ -146,8 +130,7 @@ public class PilotProject
 			Scanner obj = new Scanner(System.in);
 			System.out.println("Enter the file name to be searched:");
 			fileName = obj.nextLine();
-			
-			//Is the Entered file present in the directory
+						
 			boolean isFound = FileManagement.searchFile(folderpath, fileName);
 						
 				if(isFound)

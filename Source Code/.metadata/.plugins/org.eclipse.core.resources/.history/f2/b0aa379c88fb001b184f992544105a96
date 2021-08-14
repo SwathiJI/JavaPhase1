@@ -36,11 +36,9 @@ public class FileManagement
 	{
 		try
 		{
-			//Creating File object
 			File n1 = new File(folderpath, fileName);
 			FileWriter fw =	new FileWriter(n1);	
 			
-			//Displaying Content of the file
 			for(String s:content)
 			{
 				fw.write(s+"\n");
@@ -67,7 +65,6 @@ public class FileManagement
 		
 		try
 		{
-			//Deleting the file
 			if(file.delete())
 				return true;
 			else
@@ -87,10 +84,8 @@ public class FileManagement
 	 */
 	public static boolean searchFile(String folderpath, String fileName)
 	{
-		//Create the file object to search file
 		File file = new  File(folderpath+"\\"+fileName);
 		
-		//Searching File
 		if(file.exists())
 			return true;
 		else

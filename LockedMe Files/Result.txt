@@ -1,7 +1,0 @@
-The Files are Created and Displayed
-
-We can add new files and delete the exisiting ones
-
-All the modifications on the files are having direct impact on the folders.
-
-We need to avoid data duplication
